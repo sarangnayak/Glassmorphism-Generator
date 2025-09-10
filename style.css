@@ -1,1 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-color: #6a5af9;
+    --text-color: #ffffff;
+    --text-color-light: #e0e0e0;
+    --controls-bg: rgba(0, 0, 0, 0.3);
+    --input-bg: rgba(0, 0, 0, 0.2);
+    --border-color: rgba(255, 255, 255, 0.2);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --success-color: #45d09e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('https://images.pexels.com/photos/15583000/pexels-photo-15583000.jpeg?_gl=1*1p4y3a1*_ga*MTEyMjk5OTk1MC4xNzU3NDg3MjE1*_ga_8JE65Q40S6*czE3NTc0ODcyMTUkbzEkZzEkdDE3NTc0ODc1MzkkajUzJGwwJGgw');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    height: 90vh;
+    max-height: 750px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px var(--shadow-color);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.controls-panel {
+    padding: 30px;
+    background-color: var(--controls-bg);
+    overflow-y: auto;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.control-group, .toggle-group {
+    margin-bottom: 25px;
+}
+
+.control-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--text-color-light);
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+input[type="color"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 7px;
+}
+
+.toggle-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: var(--input-bg);
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; width: 20px;
+  left: 4px; bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+input:checked + .slider { background-color: var(--primary-color); }
+input:checked + .slider:before { transform: translateX(22px); }
+.slider.round { border-radius: 34px; }
+.slider.round:before { border-radius: 50%; }
+
+.code-output-wrapper {
+    margin-top: 30px;
+}
+.code-output-wrapper h3 {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+pre {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 15px;
+    padding-right: 50px; 
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+    position: relative;
+}
+#copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
+#copy-btn:hover {
+    background-color: #5a49e0;
+}
+.copy-success {
+    color: var(--success-color);
+    text-align: right;
+    margin-top: 10px;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.preview-panel {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://images.pexels.com/photos/15583000/pexels-photo-15583000.jpeg?_gl=1*1p4y3a1*_ga*MTEyMjk5OTk1MC4xNzU3NDg3MjE1*_ga_8JE65Q40S6*czE3NTc0ODcyMTUkbzEkZzEkdDE3NTc0ODc1MzkkajUzJGwwJGgw');
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 20px 20px 0;
+}
+
+.preview-card {
+    width: 300px;
+    height: 400px;
+    padding: 30px;
+    border-radius: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden; 
+}
+.preview-card.noise::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 500 500' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.preview-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+.preview-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.preview-card button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--text-color);
+    background-color: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s, color 0.3s;
+}
+.preview-card button:hover {
+    background-color: var(--text-color);
+    color: #333;
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+        height: auto;
+        max-height: none;
+    }
+    .preview-panel {
+        min-height: 500px;
+        border-radius: 0 0 20px 20px;
+    }
+}
+
 
