@@ -104,7 +104,7 @@ Please follow the existing coding style and structure.
 This project is licensed under the **MIT License**.  
 See the **LICENSE** file for full details.
 ---
-##👤 Author
+👤 Author
 
 1. Sarang Nayak — https://github.com/sarangnayak
 2. I build small but useful UI & utility tools to speed up frontend development.
