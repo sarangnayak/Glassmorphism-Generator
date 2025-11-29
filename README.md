@@ -55,3 +55,15 @@ Glassmorphism-Generator/
 └─ README.md        # Project documentation
 
 ```
+---
+## 🚀 Getting Started (Local Use)
+
+1. Clone the repository  
+   ```bash
+   git clone https://github.com/sarangnayak/Glassmorphism-Generator.git
+   cd Glassmorphism-Generator
+   ```
+2. Open index.html in your browser — that’s all.
+(No build step required.)
+3. Experiment with controls, preview the effect, and click “Copy CSS” to copy the style code.
+---
