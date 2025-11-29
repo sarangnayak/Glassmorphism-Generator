@@ -72,3 +72,34 @@ Glassmorphism-Generator/
 	•	Quickly iterate — change one slider, get updated preview + CSS
 	•	Useful for landing pages, modals, overlays, cards, hero sections
 ---
+## 🛠️ Why Use This Tool?
+
+- Build modern glassy UI components without guessing filter or fallback values  
+- Quickly iterate — one slider change updates the preview and CSS  
+- Ideal for landing pages, modals, overlays, cards, hero sections  
+
+---
+
+## 💡 Roadmap (Possible Improvements)
+
+- Add theme presets (light / dark / gradient variants)  
+- Enable downloadable CSS or exportable code snippet  
+- Add multiple preview modes (desktop / mobile)  
+- Add color picker with predefined theme palettes  
+- Add fallbacks for browsers without `backdrop-filter` support  
+---
+## 🤝 Contributing
+
+Contributions, improvements, or UI tweaks are welcome!
+
+1. **Fork** the repository  
+2. **Create a new branch:** `feature/your-feature`  
+3. **Make your changes** and test thoroughly  
+4. **Open a Pull Request**
+
+Please follow the existing coding style and structure.
+---
+## 📜 License
+
+This project is licensed under the **MIT License**.  
+See the **LICENSE** file for full details.
