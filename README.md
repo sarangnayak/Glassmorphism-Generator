@@ -67,3 +67,8 @@ Glassmorphism-Generator/
 (No build step required.)
 3. Experiment with controls, preview the effect, and click “Copy CSS” to copy the style code.
 ---
+🛠️ Why Use This Tool?
+	•	Build modern glassy UI components without guessing filter / fallback values
+	•	Quickly iterate — change one slider, get updated preview + CSS
+	•	Useful for landing pages, modals, overlays, cards, hero sections
+---
