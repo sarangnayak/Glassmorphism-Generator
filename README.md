@@ -3,7 +3,6 @@
 A simple and interactive tool to generate **Glassmorphism CSS** effects with live preview. Perfect for modern UI designs, card layouts, buttons, and backgrounds.
 ---
 ![Glassmorphism-Generator-Generator](./preview.png)
-
 ---
 
 ## 🔹 Features
